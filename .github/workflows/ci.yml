@@ -24,10 +24,15 @@ jobs:
         run: |
            git config --global user.email "1750263786@qq.com"
            git config --global user.name "UzumakiHan"
+           
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
       # install
       - name: Install dependencies
         run: |
-           npm ci
+           pnpm install
       
       - uses: GoogleCloudPlatform/release-please-action@v3
         id: release
