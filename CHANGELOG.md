@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/UzumakiHan/hfex-vue-cropper/compare/v1.0.0...v1.0.1) (2024-03-01)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复回调函数 ([5e83133](https://github.com/UzumakiHan/hfex-vue-cropper/commit/5e83133ef80db7951c5f8a6fd2cab07d2319d820))
+
 ## 1.0.0 (2024-03-01)
 
 
