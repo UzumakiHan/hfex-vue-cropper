@@ -32,7 +32,7 @@ jobs:
       # install
       - name: Install dependencies
         run: |
-           pnpm install
+           pnpm install --no-frozen-lockfile
       
       - uses: GoogleCloudPlatform/release-please-action@v3
         id: release
