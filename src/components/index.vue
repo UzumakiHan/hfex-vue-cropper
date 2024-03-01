@@ -20,8 +20,8 @@ const props = defineProps<{
     options?: Record<string, unknown>;
 }>();
 const emit = defineEmits<{
-    (e: 'callback4OK', v: string, b:  Record<string, unknown>): void;
-    (e: 'callback4Cancel'): void;
+    (e: 'callbackOK', v: string, b:  Record<string, unknown>): void;
+    (e: 'callbackCancel'): void;
 }>();
 
 
@@ -49,17 +49,17 @@ const getOption = async () => {
     // 合并配置
     const options:any = Object.assign({}, defalutOptions, props.options);
 
-    options.cropperJS.callback4OK = (croppedCanvas:any) => {
+    options.cropperJS.callbackOK = (croppedCanvas:any) => {
         console.log(typeof croppedCanvas)
         const cutBase64 = croppedCanvas.toDataURL('image/png');
         const canvasWidth = croppedCanvas.width;
         const canvasHeight = croppedCanvas.height;
         console.log('裁剪图片宽高',`${canvasWidth} * ${canvasHeight}`);
-        emit('callback4OK', cutBase64, croppedCanvas);
+        emit('callbackOK', cutBase64, croppedCanvas);
     };
-    options.cropperJS.callback4Cancel = () => {
+    options.cropperJS.callbackCancel = () => {
         console.log('取消裁剪');
-        emit('callback4Cancel');
+        emit('callbackCancel');
     };
     return options;
 };

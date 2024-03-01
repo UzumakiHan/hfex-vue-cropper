@@ -5,14 +5,14 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__
 }>, {
     mCropper: import("vue").Ref<any>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    callback4OK: (v: string, b: Record<string, unknown>) => void;
-    callback4Cancel: () => void;
+    callbackOK: (v: string, b: Record<string, unknown>) => void;
+    callbackCancel: () => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<{
     base64: string;
     options?: Record<string, unknown> | undefined;
 }>>> & {
-    onCallback4OK?: ((v: string, b: Record<string, unknown>) => any) | undefined;
-    onCallback4Cancel?: (() => any) | undefined;
+    onCallbackOK?: ((v: string, b: Record<string, unknown>) => any) | undefined;
+    onCallbackCancel?: (() => any) | undefined;
 }, {}, {}>, {
     describe?(_: {}): any;
 }>;

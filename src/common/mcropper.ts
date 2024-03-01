@@ -123,11 +123,11 @@ class MCropper {
 
             $('.mcropper__btn--ok').click(() => {
                 $('.mcropper').hide();
-                this.options.cropperJS.callback4OK(this.getCroppedCanvas());
+                this.options.cropperJS.callbackOK(this.getCroppedCanvas());
             });
             $('.mcropper__btn--cancel').click(() => {
                 $('.mcropper').hide();
-                this.options.cropperJS.callback4Cancel();
+                this.options.cropperJS.callbackCancel();
             });
 
             this.cropperIns = new Cropper(mCropperImg, cropperOptions);
